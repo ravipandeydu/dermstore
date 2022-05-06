@@ -21,13 +21,33 @@ h2{
      display: flex;
     justify-content: space-between;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-columns: repeat(4,auto);
     grid-template-rows: 450px;
    
     width: 90%;
     margin: auto;
     gap: 30px;
 
+}
+@media all and (min-width:451px) and (max-width:800px){
+    #bought{
+        display: flex;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 350px 350px;
+        gap: 30px;
+    }
+}
+@media all and (min-width:100px) and (max-width:450px){
+    #bought{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,1fr);
+        gap:20px
+
+
+    }
 }
 .boughtpro{
     height: 70%;
@@ -82,27 +102,51 @@ a{
 }
 /*--- shop now part---*/
 #shopnow{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3,420px);
-    grid-template-rows: repeat(2,450px);
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
     margin: 1px solid black;
     gap: 30px;
-    
-    
-    
-}
-.cards{
-    
-   border: 1px solid black;
 
+}
+@media all and (min-width:451px) and (max-width:800px){
+    #shopnow{
+        margin-top: -40px;
+        display: grid;
+        grid-template-columns:repeat(2,auto) ;
+        grid-template-rows: repeat(2,auto);
+        gap: 30px;
+    }
+    #shopping{
+        margin: 120px;
+    }
+}
+@media all and (min-width:100px) and (max-width:450px){
+    #shopnow{
+        margin-top:-20px ;
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(4,auto);
+    }
+    #shopping{
+        margin: 60px;
+    }
 }
 .cards>img{
     height: 80%;
-    width: 100%;
+    width: 95%;
 }
 h3{
     font-weight: 300;
     font-size: 22px;
 }
+.shop{
+    margin-top: -13px;
+}
+.shopup{
+    margin-top: -15px;
+}
+
