@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<style>
+    body{
+        font-family: sans-serif;
+    }
+
+    #header{
+        width:100%;
+        margin:-8px 0px;
+        position: fixed;
+        background-color: white;
+        padding:10px;
+    }
+
+    #header>div{
+        width:75%;
+        margin: auto;
+    }
+
+    #header>div>img{
+        height:80%;
+        width:194.25px;
+    }
+
+    #container{
+        background-color: rgb(248, 248, 248);
+        padding: 40px;
+    }
+
+    #signup{
+        width:40%;
+        background-color: white;
+        margin:100px auto 40px auto;
+        padding: 30px;
+        color: #333333;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    #social{
+        display:flex;
+    }
+
+    #social>div{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        margin:5px;
+        cursor: pointer;
+    }
+
+    #social>div>img{
+        width:10%;
+        margin: 10px;
+    }
+
+    input{
+        width:99%;
+        height:40px;
+    }
+
+    #signup>span{
+        margin-bottom: 10px;
+    }
+
+    #tick{
+        display: flex;
+        width:78%;
+    }
+
+    .name{
+        margin: 10px 0px;
+    }
+
+    #continue{
+        background-color: black;
+        padding:15px 0px;
+        color:white;
+        text-align: center;
+    }
+
+    #referral{
+        background-color: rgb(228, 228, 228);
+        padding:15px;
+    }
+
+    #tick:hover{
+        background-color: rgb(228, 228, 228);
+    }
+
+    #tick>div>input{
+        width: 25px;
+    }
+
+    .password{
+        border:1px solid black;
+    }
+
+    .password>input{
+        width:90%;
+        border: 0px;
+    }
+
+    .password>button{
+        border:0px;
+        background-color: white;
+    }
+
+    #continue{
+        background-color: black;
+        color: white;
+        border:0px;
+        margin:0px;
+        cursor: pointer;
+    }
+
+    b{
+        cursor: pointer;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+</style>
+<body>
+        <div id="header">
+            <div><img src="https://s1.thcdn.com/enterprise/assets/dermstore-global-a3ce7f42-4a2c-4cc5-ad05-ba594900fa02-logo-default.svg" alt="Dermstore"></div>
+        </div>
+        
+        <div id="container">
+            <form id="signup">
+                <h1>About You</h1>
+                <br/>
+                <br/>
+                <h2>Sign Up With</h2>
+                <div id="social">
+                    <div id-="facebook">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIEAAACBCAMAAADQfiliAAAAZlBMVEU7WZj///+osswrTpM3VpdZcKTz9PcUQo0xUpWSn8D4+fsbRY/s7vPO1OLU2OW4wNVIY50iSZGxutGKmLxPaKBme6pvgq5BXpvFzN3j5u+/xtlhd6h9jbXb3+mdqMZ1h7IAOYkANYjCXGyNAAACMUlEQVR4nO3cbW+DIBAHcBRUihWlWq3t1m3f/0uudk9pPZUoHC92/6TvjPeLNQjEk0VDdBnjp9T32uz2KyrJQ0RWxZfgYAQLE2EOg6AwgeoPMcVNUIW6AkNEFTEtAwIYk5qVPKiAlywOLIhJQAISkIAEKALxF3yBkCbLWXJs2/aYJE0n8yzLcgM8hr0IBOfH3WkfPUSpXp/rcS0PAsGTuFcRGJ0jCExzgqsPKfwLBC+n62MI+CWdA/gX8Hq2vn+BWQL4FvCXJYBngWwWAZ4F4jWwgF+XAV4FopkYBtEEwyI4rEDaXAKfArk4FPgW8CK4wArgUSDbyaIq3f8mPY+3axwJeDxR//DWSGPynwClXAng2+DMzdwk1aWAgSNyyS12qNwIRLcHAMpqk9CRoIGmRnYndiRIoD+htdol9ChQXWhBardV61MwHv+wBRkJSEACEpAARyAfw6Flc/ouR3EmkPXuMdCqVT0ftNvVnStBNr9bNJkUmDGsFEDTQov0wAMbV3ACJi3rBPlKAVQK9xrUzna21wqOwe/EJLRg34QW9NC5UAUaqoQqgIYDXAFYCVUADQe4ggu0lEUVgK/cYAoUWAhT0AcXFA4FeZ8+Bar4dIiKHd4Hz/mXs3USkIAEJCABCUhAAhKQgAQkIAEJSEACEpCABCQII3DQ57pJULro9d0ikNpFv/MGwdDv7KDne4Pg3vO9ve99teC7791B7z/4JsyHfe9/tPn7Bwc1Tnq1/P7BJ6xcLKu2NprgAAAAAElFTkSuQmCC" alt="facebook">
+                        Facebook
+                    </div>
+                    <div id="google">
+                        <img src="data:image/png;base64,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" alt="Google">
+                        Google
+                    </div>
+                </div>
+                <hr>
+                <h1>Or create an email account</h1>
+                    <div class="name">*Full Name</div>
+                    <div><input id="name" type="text" required></div>
+                    <br>
+                    <div class="name">*Email address</div>
+                    <div><input id="email" type="email" required></div>
+                    <br>
+                    <div class="name">*Confirm Email address</div>
+                    <div><input id="confirmEmail" type="email" required></div>
+                    <br>
+                    <div class="name">*Password</div>
+                    <div class="password">
+                        <input type="password" id="password" required>
+                        <button id="showPass" onclick="showHidePass()">SHOW</button>
+                    </div>
+                    <br>
+                    <div class="name">*Confirm Password</div>
+                    <div class="password">
+                        <input type="password" id="confirmPassword" required>
+                        <button id="show" onclick="showHideFun()">SHOW</button>
+                    </div>
+                    <br>
+                    <div class="name">Cell Phone Number (Optional)</div>
+                    <div><input type="text"></div>
+                    <div class="name">We will use this number to send occasional promotional messages.</div>
+                    <br>
+                    <div id="referral">
+                        <div class="name">Referral Code (Optional)</div>
+                        <div><input type="text"></div>
+                        <div class="name">*Your referrals discount is automatically applied at cart</div>
+                    </div>
+                    <br>
+                    <div class="name">Loyalty Reward program</div>
+                    <br/>
+                    <div id="tick">
+                        <div><input type="checkbox" required></div>
+                        <div><p>Include me in the Dermstore Rewards program <b>Read our terms of use</b></p></div>
+                    </div>
+                    <br/>
+                    <input type="submit" value="CONTINUE" id="continue">
+                    <br/>
+                    <div class="name">By proceeding, you are confirming that you agree to our <b>Terms and Conditions</b> and <b>Privacy Policy</b></div>
+                
+                
+                </form>
+        </div>  
+</body>
+</html>
+
+<script>
+    document.querySelector("#signup").addEventListener("submit", signupFun);
+
+    var usersArr = JSON.parse(localStorage.getItem("usersData")) || [];
+
+    function signupFun(){
+        event.preventDefault();
+        passwordMatch();
+        var usersObj = {
+            userName: signup.name.value,
+            userEmail: signup.email.value,
+            userPassword: signup.password.value
+        }
+
+        usersArr.push(usersObj);
+        console.log(usersArr);
+        localStorage.setItem("usersData", JSON.stringify(usersArr))
+    }
+
+    function showHidePass(){
+        var y = document.getElementById("password");
+        if(y.type === "password"){
+            y.type = "text";
+            document.getElementById("showPass").innerText = "HIDE";
+        }
+        else{
+            y.type = "password";
+            document.getElementById("showPass").innerText = "SHOW";
+        }
+    }
+
+    function showHideFun(){
+        
+        var x = document.getElementById("confirmPassword");
+        if(x.type === "password"){
+            x.type = "text";
+            document.getElementById("show").innerText = "HIDE";
+        }
+        else{
+            x.type = "password";
+            document.getElementById("show").innerText = "SHOW";
+        }
+    }
+
+    function passwordMatch(){
+        var y = document.getElementById("password");
+        var x = document.getElementById("confirmPassword");
+        if(y.value != x.value){
+            alert("Password not match");
+        }
+    }
+</script>
