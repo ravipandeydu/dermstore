@@ -36,7 +36,7 @@
     }
 
     #signup{
-        width:40%;
+        width:704px;
         background-color: white;
         margin:100px auto 40px auto;
         padding: 30px;
@@ -217,17 +217,35 @@
 
     function signupFun(){
         event.preventDefault();
-        passwordMatch();
-        var usersObj = {
+        var a = document.getElementById("email");
+        var b = document.getElementById("confirmEmail");
+        var y = document.getElementById("password");
+        var x = document.getElementById("confirmPassword");
+        if(y.value != x.value || a.value != b.value){
+            if(y.value != x.value && a.value != b.value){
+                alert("Check Email and Password")
+            }
+            else if(a.value != b.value){
+                alert("Confirm Email")
+            }
+            else{
+            alert("Password not match");
+            }
+        }
+
+        else{
+            alert("Regisration Successful");
+            var usersObj = {
             userName: signup.name.value,
             userEmail: signup.email.value,
             userPassword: signup.password.value
-        }
+            }
 
-        usersArr.push(usersObj);
-        console.log(usersArr);
-        localStorage.setItem("usersData", JSON.stringify(usersArr))
+            usersArr.push(usersObj);
+            localStorage.setItem("usersData", JSON.stringify(usersArr));
+        }
     }
+    
 
     function showHidePass(){
         var y = document.getElementById("password");
@@ -254,11 +272,4 @@
         }
     }
 
-    function passwordMatch(){
-        var y = document.getElementById("password");
-        var x = document.getElementById("confirmPassword");
-        if(y.value != x.value){
-            alert("Password not match");
-        }
-    }
 </script>
