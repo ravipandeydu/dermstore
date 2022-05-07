@@ -21,13 +21,31 @@ h2{
      display: flex;
     justify-content: space-between;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: 450px;
-   
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: auto;
     width: 90%;
     margin: auto;
     gap: 30px;
 
+}
+@media all and (min-width:451px) and (max-width:700px){
+    #bought{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        gap: 30px;
+
+    }
+}
+@media all and (min-width:451px) and (max-width:700px){
+    #bought{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        gap: 30px;
+
+    }
+    
 }
 .boughtpro{
     height: 70%;
@@ -82,22 +100,43 @@ a{
 }
 /*--- shop now part---*/
 #shopnow{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3,420px);
-    grid-template-rows: repeat(2,450px);
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
     margin: 1px solid black;
     gap: 30px;
-    
-    
-    
-}
-.cards{
-    
-   border: 1px solid black;
 
 }
+@media all and (min-width:451px) and (max-width:700px){
+    #shopnow{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        gap: 30px;
+        
+    }
+    #shopping{
+        margin-left: 180px;
+        margin-top: -30px;
+    }
+}
+@media all and (min-width:100px) and (max-width:451px){
+    #shopnow{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        grid-template-rows: repeat(4,auto);
+        gap: 30px;
+        
+    }
+    #shopping{
+        margin-left: 60px;
+        margin-top: -30px;
+    }
+}
+
 .cards>img{
     height: 80%;
     width: 100%;
@@ -105,4 +144,10 @@ a{
 h3{
     font-weight: 300;
     font-size: 22px;
+}
+.shop{
+    margin-top: -13px;
+}
+.shopup{
+    margin-top: -15px;
 }
