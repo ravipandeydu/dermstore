@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Cart-Dermstore</title>
+    <title>Document</title>
     <link rel="stylesheet" href="cart.css" />
    
   </head>
   <body>
     <div class="logo"><h2>Your Cart</h2></div>
     <hr>
-<<<<<<< HEAD
       
     <table>
       <thead>
@@ -28,12 +27,6 @@
        
     
    
-=======
-    <div id="maincontent">
-      
-    </div>
-    <div id="cartproducts"></div>
->>>>>>> bd2632726e530f14775a9fddc86a757ccdc3cafc
    
         
 
@@ -42,7 +35,6 @@
     </div>
   </body>
   <script>
-<<<<<<< HEAD
      
    
     
@@ -136,126 +128,6 @@
     //   }
 ///----to display the products added in cart---//
       
-=======
-      var productsdata=(productData=[{
-          img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11422018-5884870995772050.jpg",
-          productname:"SkinMedica HA5 Smooth Plump Lip System (2 piece)",
-          originalprice:"MSRP:$106.00",
-          discountprice:"$90.10"
-      },
-      {
-           img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290631-5864870995720591.jpg",
-          productname:"SkinMedica AHA/BHA Exfoliating Cleanser (6 fl. oz.)",
-          originalprice:"MSRP:$48.00",
-          discountprice:"$40.80"
-      },
-      {
-           img:"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289657-9384876690289403.jpg",
-          productname:"SkinMedica AHA/BHA Exfoliating Cleanser (6 fl. oz.)",
-          originalprice:"MSRP:$48.80",
-          discountprice:"$39.10"
-      },
-      {
-           img:"https://static.thcdn.com/images/small/webp//productimg/original/11289675-1574871019544164.jpg",
-          productname:"SkinMedica Replenish Hydrating Cream (2 oz.)",
-          originalprice:"MSRP:$68.00",
-          discountprice:"$57.80"
-      }
-    ]);
-    localStorage.setItem("cart-products",JSON.stringify(productsdata))
-    var productarr = JSON.parse(localStorage.getItem("removeele")) || [];
-    display(productarr);
-function display(data) {
-      if (cartproducts.innerHTML == []) {
-        cartproducts.innerHTML = `<h2 id="continue">There are currently no items in your cart</h2>
-                                <button id="shopping"><a href="index.html">CONTINUE SHOPPING</a></button>
-                                <div id="shopnow">
-           <div class="cards">
-             <img src="https://s1.thcdn.com/widgets/208-us/12/1-skin-care-category-group-shot-114712.png" alt="">
-            <div class="shop">
-              <h3>Skin Care</h3>
-              <div class="shopup"><a href=""></a>SHOP NOW</div>
-            </div>
-           </div>
-           <div class="cards">
-             <img src="https://s1.thcdn.com/widgets/208-us/32/2-hair-care-category-group-shot-114732.png" alt="">
-             <div class="shop">
-              <h3>Hair Care</h3>
-              <div class="shopup"><a href=""></a>SHOP NOW</div>
-            </div>
-           </div>
-           <div class="cards">
-             <img src="https://s1.thcdn.com/widgets/208-us/32/3-brands-category-group-shot-114732.png" alt="">
-             <div class="shop">
-              <h3>Brands</h3>
-              <div class="shopup"><a href=""></a>SHOP NOW</div>
-            </div>
-           </div>
-           <div class="cards">
-             <img src="https://s1.thcdn.com/widgets/208-us/26/4-makeup-category-group-shot-114726.png" alt="">
-             <div class="shop">
-              <h3>Makeup</h3>
-              <div class="shopup"><a href=""></a>SHOP NOW</div>
-            </div>
-           </div>
-           <div class="cards">
-             <img src="https://s1.thcdn.com/widgets/208-us/25/5-bath-body-category-group-shot-114725.png" alt="">
-             <div class="shop">
-              <h3>Bath & Body</h3>
-              <div class="shopup"><a href=""></a>SHOP NOW</div>
-            </div>
-           </div>
-           <div class="cards">
-             <img src="https://s1.thcdn.com/widgets/208-us/19/6-sale-category_woman-with-red-lipstick-114719.png" alt="">
-             <div class="shop">
-              <h3>Sale</h3>
-              <div class="shopup"><a href=""></a>SHOP NOW</div>
-            </div>
-           </div>
-         </div>
-                               `;
-      } else {
-        display(data);
-        cartproducts.innerHTML=`
-        <div id="heading">
-        <div >Items</div>
-        <div>Price</div>
-        <div>Quantity</div>
-        <div>Subtotal</div>
-      </div>
-         <div><h2 id="custo">Customers who also bought this:</h2></div>
-    <div id="bought">
-        <div><img class="boughtpro" src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11422018-5884870995772050.jpg" alt="product">
-        <div class="des">SkinMedica HA5 Smooth Plump Lip System (2 piece)
-            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$106.00</div></div>
-            <div class="des"><p>$90.10</p></div>
-            <button  class="quickbuy">Quick Buy</button>
-        </div>
-        </div>
-        <div><img class="boughtpro"src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290631-5864870995720591.jpg" alt="">
-        <div class="des">SkinMedica AHA/BHA Exfoliating Cleanser (6 fl. oz.)
-            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$48.00</div></div>
-            <div class="des"><p>$40.80</p></div>
-            <button  class="quickbuy">Quick Buy</button>
-        </div></div>
-        <div><img class="boughtpro"src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289657-9384876690289403.jpg" alt="">
-        <div class="des">SkinMedica AHA/BHA Exfoliating Cleanser (6 fl. oz.)
-            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$48.00</div></div>
-            <div class="des"><p>$40.80</p></div>
-            <button  class="quickbuy">Quick Buy</button>
-        </div></div>
-        <div><img class="boughtpro"src="https://static.thcdn.com/images/small/webp//productimg/original/11289675-1574871019544164.jpg" alt="">
-        <div class="des">SkinMedica Replenish Hydrating Cream (2 oz.)
-            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$68.00</div></div>
-            <div class="des"><p>$57.80</p></div>
-            <button  class="quickbuy">Quick Buy</button>
-        </div></div>`
-      }
-///----to display the products added in cart---//
-      data.forEach(function (element) {
-        var maindiv = document.createElement("div");
-        maindiv.setAttribute("id", "item")
->>>>>>> bd2632726e530f14775a9fddc86a757ccdc3cafc
 
       data.forEach(function (elem,index) {
         var tr= document.createElement("tr");
@@ -305,20 +177,11 @@ function display(data) {
           deleteproduct(elem,index);
         });
 
-<<<<<<< HEAD
       //  quickBuy(element)
-=======
-        var hr=document.createElement("hr")
-       
->>>>>>> bd2632726e530f14775a9fddc86a757ccdc3cafc
 
         tr.append(td1, td2, td3, td4, td5);
 
-<<<<<<< HEAD
         document.querySelector("tbody").append(tr);;
-=======
-        document.querySelector("#cartproducts").append(maindiv,hr);
->>>>>>> bd2632726e530f14775a9fddc86a757ccdc3cafc
       });
     }
       display(cartlsdata);
@@ -330,7 +193,6 @@ function display(data) {
       
     }
     //---inc dec fun()--//
-<<<<<<< HEAD
     // var count=1;
     // document.querySelector("#numberofquantity")
     // function increment(element){
@@ -354,27 +216,10 @@ function display(data) {
       //  function quickBuy(element){
       //    cartlsdata.push(element)
       //    localStorage.setItem("product_array",JSON.stringify(cartlsdata))
-=======
-    var count=1
-    document.querySelector("#numberofquantity").innerText=count
-    function increment(element){
-        count++;
-        document.querySelector("#numberofquantity").innerText=count
-    }
-    function decrement(element){
-        count--;
-        document.querySelector("#numberofquantity").innerText=count
-    }
-  //--- buynow products---when added to cart it will display in down in quick add--//
-       var buynow= document.getElementById("quickbuy");
-       buynow.addEventListener("click", quickBuy())
-
-       function quickBuy(element){
-        productarr.push(element)
-        localStorage.setItem("cart", JSON.stringify(productarr))
->>>>>>> bd2632726e530f14775a9fddc86a757ccdc3cafc
            
-       }
+      //  }
+
+
 
 
     
