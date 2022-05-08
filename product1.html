@@ -101,15 +101,15 @@
                 <div class="table">
                     <div>
                         <input type="checkbox" class="t1" >
-                        <span class="t">
+                        <span class="t11">
                             $169.00 One Time Purchase
                         </span>
                     </input>
                     </div>
                     <hr>
                     <div>
-                        <input type="checkbox" class="t1" >
-                        <span class="t">
+                        <input type="checkbox" class="t2" >
+                        <span class="t22">
                             $169.00 Subscribe
                         </span>
                       </input>
@@ -190,6 +190,56 @@
          prev.setAttribute("src","https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-2094892770972332.jpg");
          document.querySelector("#preview").append(prev)
       }
+      var check1 = document.querySelector(".t1");
+      var check2 = document.querySelector(".t2");
+      var check11=document.querySelector(".t11");
+      var check22=document.querySelector(".t22");
+      var price1 = document.querySelector("#price")
+      check1.addEventListener("click",myfunc7);
+      check2.addEventListener("click", myfunc8);
+      function myfunc7() {
+          if (check1.checked == true){
+              check11.id="t11";
+              price1.innerText="$169.00";
+              check22.removeAttribute("id");
+              return check2.checked = false;
+          }
+          else {
+              check11.removeAttribute("id");
+              check2.checked = true;
+                   if(check2.checked == true){
+                        check22.id="t22";
+                       price1.innerText="$169.00"
+                     return check2.checked=true;
+                     }
+                else {
+                       check22.removeAttribute("id");
+                        return check1.cheked=true;
+                      }
+             }
+            }
+      function myfunc8() {
+        if (check2.checked == true){
+              check22.id="t11";
+              price1.innerText="$169.00";
+              check11.removeAttribute("id");
+              return check1.checked = false;
+          }
+          else {
+              check22.removeAttribute("id");
+              check1.checked = true;
+                   if(check1.checked == true){
+                        check11.id="t22";
+                       price1.innerText="$169.00"
+                     return check1.checked=true;
+                     }
+                else {
+                       check11.removeAttribute("id");
+                        return check2.cheked=true;
+                      }     
+                 }
+                }
+
 
       var plus = document.getElementById("plus");
       plus.addEventListener("click", myfunc4)
