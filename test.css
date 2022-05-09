@@ -1,0 +1,474 @@
+
+
+        /* HEADER */
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+      body{
+          /* height: 1500px; */
+          height: auto;
+          overflow-x: hidden;
+      }
+      #top{
+          background: rgb(241, 241, 241);
+          height: 32px;
+      }
+        #header{
+            
+            margin: auto;
+            background: white;
+            box-shadow: rgba(33, 35, 38, 0.1) 0px -10px 10px -10px;
+            border-bottom: 1px solid rgb(189, 186, 186);
+            position: sticky;
+            top: 0px;
+            z-index: 400;
+            height: 147px;
+           
+            
+        }
+        #header li{
+            list-style: none;
+        }
+
+        /* #vasu{
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        } */
+        /****** navbar top style starts here ******/
+
+
+        #nav-left{
+            width: 20%;
+        }
+        #max-img{
+            width: 230px;
+            height: 57px;
+            padding-left: 10px;
+        }
+        #nav-left>a>img:last-child{
+            display: none;
+        }
+        #nav-middle{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            width: 60%;
+            /* margin: 0 50px; */
+            
+        }
+        #nav-middle>div{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            border: 1px solid rgba(128, 128, 128, 0.596);
+            width: 430px;
+            /* padding: 5px; */
+            
+            
+            
+        }
+        #nav-middle>div>input{
+            border: none;
+            background: none;
+            outline: none;
+            width: 406px;
+            padding: 10px 0 10px 5px;
+        }
+        #nav-middle>div>a{
+          padding: 5px 8px 5px 8px; 
+        }
+        #nav-middle>div>a:hover{
+            background-color: rgba(128, 128, 128, 0.1);
+            cursor: pointer;
+        }
+       
+        /* #nav-middle>input{
+            display: inline-block;
+            margin: 0 auto;
+            
+            padding: 11px 3px;
+            /* font-size: 24px; */
+            /* width: 400px; */
+            
+        /* } */ 
+        #nav-right{
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #nav-right>div{
+            margin: 20px;
+        }
+        
+        #nav-head{
+            display: flex;
+            height: 90px;
+            align-items: center;
+            /* width: 70%; */
+            width: 70%;
+            margin: auto;
+        }
+        #login>div:first-child{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #login>div>img{
+            height: 38px;
+        }
+        #login>div>img,#login>div>p{
+            align-self: center;
+            padding: 5px 8px;
+        }
+        #login>div>p{
+            padding: 5px 10px;
+        }
+        #login >div:last-child, #cart>#hid{
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 5;
+            text-transform: capitalize;
+            transition: color 0.3s ease;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 4px 4px -1px;
+            overflow: hidden;
+            padding: 20px 10px;
+            background: white;
+            border-top: 0;
+        }
+        #login:hover >div:first-child{
+            cursor: pointer;
+            background-color: rgba(128, 128, 128, 0.1);
+        }
+        #login:hover >div:last-child{
+            opacity: 1;
+            visibility: visible;
+            /* margin: 20px; */
+            /* padding: 20px; */
+
+            
+        }
+        #login-list{
+            left: 65%;
+            width: 320px;
+            transform: translateX(-21%);
+            margin: 0;
+            padding: 0;
+
+        }
+        #cart>a{
+           display: block;
+        }
+        #cart>a>div>p{
+            color: black;
+        }
+        #cart>a>div>p:hover{
+            color: black;
+        }
+        #cart>a>div:first-child{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            cursor: pointer;
+            padding: 6px 15px;
+        }
+        #hid{
+            right: 14.9%;
+        }
+        #cart:hover{
+            background-color: rgba(128, 128, 128, 0.1);
+        }
+        #cart>a>div:first-child>img{
+            margin-right: 8px;
+        }
+        #cart>#hid{
+            padding: 25px;
+            background: white;
+        }
+        #cart:hover>#hid{
+            opacity: 1;
+            visibility: visible;
+        }
+        #login-list>ul{
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+        #login-list>ul>div{
+            background-color: rgba(128, 128, 128, 0.1);
+        }
+        /* #login-list>ul>div>button:first-child */
+        #login1{
+            background-color: black;
+            color: white;
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px 20px;
+            /* border: 2px solid black; */
+            border: none;
+        }
+        
+        #signin1{
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            margin: 8px 0;
+            padding: 8px 20px;
+            border: 2px solid black;
+        }
+        #login-list>ul>div>a>button:hover{
+            background-color: rgba(128, 128, 128, 0.356);
+        }
+        #login1:hover{
+            /* border: 2px solid rgba(128, 128, 128, 0.548); */
+            background: rgba(128, 128, 128, 0.548);
+        }
+        #login-list>ul>li{
+            display: block;
+            line-height: 1;
+            cursor: pointer;
+            padding: 15px;
+        }
+
+        /* #login-list>ul>button:hover{
+
+        } */
+        #login-list>ul>li:hover{
+            background: rgba(128, 128, 128, 0.1);
+        }
+        /****** navbar bottom style starts here ******/
+
+        #next1{
+            display: none;
+        }
+        #tools1>div:hover{
+            cursor: pointer;
+            background: rgba(128, 128, 128, 0.1);
+        }
+        #nav-elements{
+            width: 100%;
+            
+            margin: 0 15% 0 15% ;
+        }
+        #nav-elements>ul{
+           display: flex;
+           align-items: center;
+           list-style: none;
+           margin: 0;
+           width: 85%;
+           /* width: 85%; */
+        }
+        #nav-elements>ul>li{
+            margin: 0 5px;
+            display: inline-block;
+            line-height: 50px;
+            /* margin-left: 25px; */ 
+            
+        }
+        #nav-elements>ul>li>a{
+            text-decoration: none;
+            color: black;
+            
+            padding: 8px 5px;
+            position: relative;
+            text-transform: capitalize;
+            transition: color 0.3s ease;
+            font-size: 15px;
+            margin-right: 10px;
+           
+        }
+        #nav-elements>ul>li>a:hover{
+            background: rgba(128, 128, 128, 0.1);
+            /* border-radius: 3px; */
+            transition: color 0.3s ease;
+        }
+    
+        .sub-menu{
+            display: flex;
+            position: absolute;
+            flex-wrap: wrap;
+            z-index: 500;
+            background: white;
+            text-transform: capitalize;
+            transition: color 0.3s ease;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 4px 4px -1px;
+            /* box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3); */
+            padding: 20px 10px;
+            font-family: sans-serif;
+            transition: all 0.5s ease;
+            opacity: 0;
+            visibility: hidden;
+
+        } 
+      
+        .sub-menu ul>li{
+            line-height: 1;
+        }
+        .sub-menu ul>li>a{
+            text-decoration: none;
+            padding: 8px 0;
+            display: inline-block;
+            color: black;
+            font-size: 14px;
+        }
+        .sub-menu ul>li:hover{
+              background: rgba(128, 128, 128, 0.1);
+        }
+        .nav-elements-has-child:hover .sub-menu{
+            opacity: 1;
+            visibility: visible;          
+            
+        }
+        
+        #browse{
+            min-width: 280px;
+            max-width: 100%;
+            left: 20%;
+            transform: translateX(-8%);
+        }
+        #skincare1{
+            max-width: 1300px;
+            left: 30%;
+            transform: translateX(-22%);
+        }
+        #makeup1{
+            max-width: 1080px;
+            left: 30%;
+            transform: translateX(-27%);
+        }
+        #hair1{
+            max-width: 900px;
+            left: 20%;
+            transform: translateX(-5%);
+        }
+        #bath1{
+            max-width: 1080px;
+            left: 40%;
+            transform: translateX(-40%);
+        }
+        #tools1{
+            left: 50%;
+            transform: translateX(-45%);
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        #gifts1{
+            left: 55%;
+            transform: translateX(-25%);
+        }
+        #new1{
+            left: 64%;
+        }
+        #skin1{
+            left:48.5%;
+        }
+        .sub-list{
+            margin: 10px;
+            width: 190px;
+            
+        }
+        .sub-list>ul{
+            padding: 0;
+        }
+        .sub-list>ul::first-line{
+            font-weight: bold;
+        }
+        .sub-list>hr{
+            opacity: .6;
+          
+        }
+        .skin-101{
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            width: 660px;
+        }
+        .skin-101>div{
+            width: 200px;
+           
+            margin:10px;
+            position: relative;
+            cursor: pointer;
+
+        }
+        .skin-101>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+            bottom: 2px;
+        }
+        .skin-101>div>img{
+            width: 100%;
+        }
+        .skin-101>div>h3{
+            line-height: 1.5;
+            font-size: 13px;
+        }
+
+        /* ****tag bars style starts here **** */
+
+
+        #tag-bar-first{
+            display: flex;
+            position: relative;
+            /* z-index: 3; */
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            background: rgb(241, 239, 239);
+        }
+        /* #tag-bar-first>div{
+            margin: 20px;
+        } */
+        #tag-bar-first>div{
+            display: flex;
+            margin: 0 20px;
+            font-family: sans-serif;
+        }
+        #tag-bar-first>div>img{
+            margin-right: 12px;
+            align-self: center;
+            width: 20px;
+        }
+        #tag-bar-first>div>p{
+           
+            align-self: center;
+            font-size: 14px;
+        }
+        #tag-bar-first>div>p:hover{
+            color: rgb(99, 98, 98);
+            cursor: pointer;
+        }
+        #tag-bar-sec{
+            position: relative;
+            /* z-index: 300; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           height: 50px;
+           font-family: sans-serif;
+           font-size: 15px;
+           font-weight: 500;
+           background: rgb(201, 201, 201);
+           letter-spacing: 0px;
+        }
+        #tag-bar-sec:hover{
+            background: rgb(212, 212, 212);
+            cursor: pointer;
+        }
+
+        /* *****     MEDIA QUERY STARTS HERE     *****  */
+
+  
