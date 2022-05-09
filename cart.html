@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css" />
+   
+  </head>
+  <body>
+    <div class="logo"><h2>Your Cart</h2></div>
+    <hr>
+      
+    <table>
+      <thead id="head">
+        <tr id="tr1">
+          <th id="it">Items</th>
+          <th></th>
+          <th id="pric">Price</th>
+          <th id="quan">Quantity</th>
+          <th id="total">Subtotal</th>
+          <th id="del"></th>
+        </tr>
+      </thead>
+      
+      <tbody id="body"></tbody>
+      <tbody id="body2"></tbody>
+      
+    </table>
+    
+    <div id="cartproducts"></div>
+          
+          <div>
+            <button id="shop">Continue Shopping</button>
+            
+          </div>
+          
+                                
+          <div id="shopnow">
+           <div class="cards">
+             <img src="https://s1.thcdn.com/widgets/208-us/12/1-skin-care-category-group-shot-114712.png" alt="">
+            <div class="shop">
+              <h3>Skin Care</h3>
+              <div class="shopup"><a href=""></a>SHOP NOW</div>
+            </div>
+           </div>
+           <div class="cards">
+             <img src="https://s1.thcdn.com/widgets/208-us/32/2-hair-care-category-group-shot-114732.png" alt="">
+             <div class="shop">
+              <h3>Hair Care</h3>
+              <div class="shopup"><a href=""></a>SHOP NOW</div>
+            </div>
+           </div>
+           <div class="cards">
+             <img src="https://s1.thcdn.com/widgets/208-us/32/3-brands-category-group-shot-114732.png" alt="">
+             <div class="shop">
+              <h3>Brands</h3>
+              <div class="shopup"><a href=""></a>SHOP NOW</div>
+            </div>
+           </div>
+           <div class="cards">
+             <img src="https://s1.thcdn.com/widgets/208-us/26/4-makeup-category-group-shot-114726.png" alt="">
+             <div class="shop">
+              <h3>Makeup</h3>
+              <div class="shopup"><a href=""></a>SHOP NOW</div>
+            </div>
+           </div>
+           <div class="cards">
+             <img src="https://s1.thcdn.com/widgets/208-us/25/5-bath-body-category-group-shot-114725.png" alt="">
+             <div class="shop">
+              <h3>Bath & Body</h3>
+              <div class="shopup"><a href=""></a>SHOP NOW</div>
+            </div>
+           </div>
+           <div class="cards">
+             <img src="https://s1.thcdn.com/widgets/208-us/19/6-sale-category_woman-with-red-lipstick-114719.png" alt="">
+             <div class="shop">
+              <h3>Sale</h3>
+              <div class="shopup"><a href=""></a>SHOP NOW</div>
+            </div>
+           </div>
+         </div>
+
+         
+        
+    </div>
+  </body>
+  <script>
+     
+   
+    
+   var cartlsdata = JSON.parse(localStorage.getItem("product_array"));
+    
+    var arrsub = [];
+    
+      cartlsdata.forEach(function (elem,index) {
+        var tr= document.createElement("tr");
+        
+        var td1=document.createElement("td")
+        var img=document.createElement("img")
+        img.setAttribute("id","cartimg")
+        img.setAttribute("src", elem.product_img)
+        td1.append(img)
+       
+        var td2=document.createElement("td");
+        td2.innerText=elem.product_name;
+
+        var td3 = document.createElement("td");
+        var divpr=document.createElement("input")
+        divpr.value=elem.product_price
+        divpr.setAttribute("id","cartprice")
+        td3.append(divpr)
+
+        
+
+        var td4 = document.createElement("td");
+        td4.setAttribute("id", "quantity");
+
+        var divqt=document.createElement("div")
+        divqt.setAttribute("id","divqt")
+
+        var decdiv=document.createElement("div")
+        decdiv.setAttribute("id","minus")
+        decdiv.innerText="-"
+        decdiv.style.cursor="pointer"
+        decdiv.addEventListener("click",function(){
+          myfundec(elem,index)
+        })
+         
+
+        var qt=document.createElement("input")
+        qt.setAttribute("id","qtno")
+        qt.value=elem.quantity
+       
+
+        var incdiv=document.createElement("div")
+        incdiv.setAttribute("id","plus")
+        incdiv.innerText="+"
+        incdiv.style.cursor="pointer"
+        incdiv.addEventListener("click", function(){
+          myfuninc()
+        })
+
+        divqt.append(decdiv,qt,incdiv)
+        td4.append(divqt)
+        
+
+
+        td5=document.createElement("td")
+        var divsub=document.createElement("input")
+        divsub.setAttribute("id", "subtot")
+        divsub.setAttribute("type", "number")
+          divsub.value=(elem.product_price)*(elem.quantity)
+          arrsub.push (+(divsub.value));
+        td5.append(divsub)
+        console.log(divsub.value)
+         
+
+        var td6 = document.createElement("td");
+        td6.setAttribute("id","del")
+        td6.innerText = "X";
+        td6.style.cursor = "pointer";
+        td6.addEventListener("click", function () {
+          deleteproduct(elem,index);
+
+          
+         
+        });
+        
+        var sum =0;
+        
+        // console.log(arrsub);
+        // arrsub.trim().map(Number);
+        // console.log(arrsub)
+
+        // for(var i = 0; i<arrsub.length; i++){
+          
+        //   sum = sum + arrsub[i];
+
+          
+        // }
+        console.log(arrsub)
+        console.log(typeof(arrsub[0]))
+
+        arrsub.reduce(myfunc1);
+        function myfunc1(total,num) {
+              return total + num;
+        }
+
+        console.log(sum);
+
+
+        tr.append(td1, td2, td3, td4, td5,td6);
+
+        document.querySelector("#body").append(tr);
+        var tr2=document.createElement("tr")
+
+        var tdi=document.createElement("td")
+
+        var tdii=document.createElement("td")
+
+        var tdiii=document.createElement("td")
+
+        var tdiv=document.createElement("td")
+
+         var tdv=document.createElement("td")
+
+      
+        var tdvi=document.createElement("td")
+      tdvi.setAttribute("id", "vith")
+      tdvi.innerText=sum
+
+      tr2.append(tdi.tdii,tdiii,tdiv, tdv,tdvi);
+      document.querySelector("#body2").append(tr2);
+      
+      
+
+
+        
+      });
+     
+      
+      
+
+
+    function deleteproduct(elem,index) {
+      cartlsdata.splice(index,1);
+     localStorage.setItem("product_array", JSON.stringify(cartlsdata))
+     
+           window.location.reload();
+    }
+    
+
+
+  
+    var count=document.getElementById("qtno").value;
+    function myfuninc(elem,index){
+      count++;
+      document.getElementById("qtno").value=count;
+      var pricetotal= document.getElementById("subtot")
+      pricetotal.value=count*(document.getElementById("cartprice").value)
+      
+
+    }
+
+    
+    function myfundec(elem,index){
+      count--;
+      var pricedec=document.getElementById("subtot")
+      pricedec.value=(document.getElementById("subtot").value)-(document.getElementById("cartprice").value)
+      if (count<1){
+        document.getElementById("qtno").value=count;
+        document.querySelector("tbody").innerHTML=null;
+        document.getElementById("head").innerHTML=null;
+        document.querySelector("#cartproducts").innerHTML=`<p> There are currently no items in your cart</p>`
+        deleteproduct()
+       
+        
+        
+      }
+      
+      else{
+        document.getElementById("qtno").value=count;
+         document.getElementById("cartproducts").innerHTML=` <button id="shop">Continue Shopping</button> <input id="input" type="text" placeholder="Got a cupon code?Enter it here:"><button id="add">ADD</button>
+       <div><h2 id="custo">Customers who also bought this:</h2></div>
+    <div id="bought">
+        <div><img class="boughtpro" src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11422018-5884870995772050.jpg" alt="product">
+        <div class="des">SkinMedica HA5 Smooth Plump Lip System (2 piece pack)
+            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$106.00</div></div>
+            <div class="des"><p>$90.10</p></div>
+            <button  class="quickbuy">Quick Buy</button>
+        </div>
+        </div>
+        <div><img class="boughtpro"src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290631-5864870995720591.jpg" alt="">
+        <div class="des">SkinMedica AHA/BHA Exfoliating Face Cleanser (6 fl. oz.)
+            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$48.00</div></div>
+            <div class="des"><p>$40.80</p></div>
+            <button  class="quickbuy">Quick Buy</button>
+        </div></div>
+        <div><img class="boughtpro"src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289657-9384876690289403.jpg" alt="">
+        <div class="des">SkinMedica AHA/BHA Exfoliating Face Cleanser (6 fl. oz.)
+            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$48.00</div></div>
+            <div class="des"><p>$40.80</p></div>
+            <button  class="quickbuy">Quick Buy</button>
+        </div></div>
+        <div><img class="boughtpro"src="https://static.thcdn.com/images/small/webp//productimg/original/11289675-1574871019544164.jpg" alt="">
+        <div class="des">SkinMedica Replenish AHA/BHA Hydrating Face Cream (2 oz.)
+            <div class="discount"><div class="des">MSRP:</div><div id="price"class="des">$68.00</div></div>
+            <div class="des"><p>$57.80</p></div>
+            <button  class="quickbuy">Quick Buy</button>
+        </div></div>`
+       
+      
+       
+      
+      }
+    
+    }
+   
+
+  </script>
+</html>
