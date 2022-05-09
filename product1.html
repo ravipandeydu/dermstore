@@ -269,12 +269,18 @@
         submit.addEventListener("click", myfunc6)
         var name = document.querySelector(".name").innerText;
         var price = document.querySelector("#price").innerText;
+        var price1="";
+         for (var a=1; a<price.length; a++){
+               price1=price1+price[a];
+         }
+         price1 = +(price1);
+         console.log(price1,typeof(price1))
         var image = document.querySelector("#img1").src
         var product_arr = [];
         function myfunc6() {
             var obj = {
                 product_name : name,
-                product_price : price,
+                product_price : price1,
                 quantity : qty,
                 product_img : image
             }
