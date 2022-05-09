@@ -22,33 +22,35 @@ h2{
     justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(4,auto);
-    grid-template-rows: auto;
+    grid-template-rows: 450px;
+   
     width: 90%;
     margin: auto;
     gap: 30px;
 
 }
-@media all and (min-width:451px) and (max-width:700px){
+@media all and (min-width:451px) and (max-width:800px){
     #bought{
+        display: flex;
+        justify-content: space-between;
         display: grid;
-        grid-template-columns: repeat(2,auto);
-        grid-template-rows: repeat(2,auto);
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 350px 350px;
         gap: 30px;
-
     }
 }
-@media all and (min-width:451px) and (max-width:700px){
+@media all and (min-width:100px) and (max-width:450px){
     #bought{
         display: grid;
-        grid-template-columns: repeat(2,auto);
-        grid-template-rows: repeat(2,auto);
-        gap: 30px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4,1fr);
+        gap:20px
+
 
     }
-    
 }
 .boughtpro{
-    height: auto;
+    height: 70%;
     width: 100%;
 }
 
@@ -68,7 +70,6 @@ p{
     font-weight: bold;
 }
 .quickbuy{
-    margin-top: 5px;
     border: 0px;
     width: 100%;
     font-size: 17px;
@@ -111,33 +112,29 @@ a{
     gap: 30px;
 
 }
-@media all and (min-width:451px) and (max-width:700px){
+@media all and (min-width:451px) and (max-width:800px){
     #shopnow{
+        margin-top: -40px;
         display: grid;
-        grid-template-columns: repeat(2,auto);
-        grid-template-rows: repeat(2,400px);
-        gap: 20px;
-        
+        grid-template-columns:repeat(2,auto) ;
+        grid-template-rows: repeat(2,auto);
+        gap: 30px;
     }
     #shopping{
-        margin-left: 180px;
-        margin-top: -20px;
+        margin: 120px;
     }
 }
-@media all and (min-width:100px) and (max-width:451px){
+@media all and (min-width:100px) and (max-width:450px){
     #shopnow{
+        margin-top:-20px ;
         display: grid;
         grid-template-columns: repeat(1,auto);
         grid-template-rows: repeat(4,auto);
-        gap: 30px;
-        
     }
     #shopping{
-        margin-left: 60px;
-        margin-top: -30px;
+        margin: 60px;
     }
 }
-
 .cards>img{
     height: 80%;
     width: 95%;
@@ -152,104 +149,4 @@ h3{
 .shopup{
     margin-top: -15px;
 }
-#cartimg{
-    width: 85px;
-    height: 80px;
-}
-#divqt{
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid black;
-    
-}
-#qtno{
-    text-align: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    padding: 3px;
-    font-size: 17px;
-}
-#minus{
-    text-align: center;
-    padding: 3px;
-    font-size: 19px;
-    width: 10px;
-}
-#plus{
-    text-align: center;
-    padding: 3px;
-    font-size: 19px;
-    
-}
-#shop{
-    padding: 10px;
-    font-size: 18px;
-    background-color: black;
-    color: white;
-    margin-top: 30px;
-}
-#checkout{
-    padding: 10px;
-    font-size: 17px;
-    background-color: black;
-    color: white;
-    margin-left: 100px;
-    margin-top: 30px;
-}
-#input{
-    width: 250px;
-    height: 40px;
-}
-#add{
-    background-color: black;
-    color: white;
-    width: 90px;
-    height: 45px;
-    padding: 5px;
-    font-size: 16px;
-}
-/* table css */
 
-#it{
-    width: 70px;
-}
-#pric{
-    width: 100px;
-    
-}
-#cartprice{
-    text-align: center;
-}
-#quan{
-    width: 60px;
-}
-#total{
-    width: 150px;
-}
-#subtot{
-    text-align: center;
-}
-#cartprice{
-    border: 0px;
-}
-#subtot{
-    border: 0px;
-}
-#qtno{
-    border: 0px;
-    width: 18px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-#line{
-    width: 100%;
-}
-#pricesum{
-    margin-left: 530px;
-    
-    width: 100px;
-    height: 20px;
-}
-#vith{
-    text-align: center;
-}
