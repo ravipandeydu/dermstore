@@ -132,7 +132,7 @@
                     </button>
                  </div>
                   <div class="save">
-                    <input type="checkbox"> Save to My Favourites
+                    <input type="checkbox" id="save"> Save to My Favourites
                   </div>
                   <p class="para2">
                       In stock - Usually dispatched within 24 hours
@@ -281,6 +281,18 @@
             product_arr.push(obj)
             console.log(image)
             localStorage.setItem("product_array",JSON.stringify(product_arr))
+            alert("This Item Has Been Added To Your Cart")
+        }
+        var saved = document.querySelector("#save")
+        saved.addEventListener("click",myfunc9)
+
+        function myfunc9() {
+            if (saved.checked == true){
+                alert("This Item Is Added TO your Wishlist")
+            }
+            else {
+                alert("This Item Is removed from your Wishlist")
+            }
         }
         // console.log(name,price,qty,img1)
 </script>

@@ -83,7 +83,7 @@
             </div>
             <div id="div2">
                 <div class="complogo">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ961SRAT3skfoCSUTfhVfvO4i-WxHaliOhZ2mkCAq9EFNrIGdikAa6ujQnzKsB1kTmg&usqp=CAU" alt="logo1">
+                    <img src="https://s1.thcdn.com/design-assets/images/logos/shared-brands/colour/skinmedica.gif" alt="logo1">
                 </div>
                 <h2 class="name">SkinMedica TNS Advanced+ Serum (1 oz.)</h2>
                 <p class="sub">
@@ -280,6 +280,17 @@
             product_arr.push(obj)
             console.log(image)
             localStorage.setItem("product_array",JSON.stringify(product_arr))
+            alert("This Item Has Been Added To Your Cart");
+        }
+        var saved = document.querySelector("#save")
+        saved.addEventListener("click",myfunc9)
+        function myfunc9() {
+            if (saved.checked == true){
+                alert("This Item Is Added TO your Wishlist")
+            }
+            else {
+                alert("This Item Is removed from your Wishlist")
+            }
         }
         // console.log(name,price,qty,img1)
 </script>
