@@ -375,15 +375,46 @@
         "price":"200.00"
     }
 ]  
-  var datalth=  data.sort(myfunc1)
+for(var a=0; a<data.length; a++){
+       var div = document.createElement("div");
+       div.id="div0";
+       var div1 = document.createElement("div");
+       var x = "bg"+a
+      div1.id= x;
+       var image = document.createElement("img");
+       image.src=data[a].image;
+       var name0 = document.createElement("h3");
+       name0.innerText = data[a].name;
+       name0.id = "name"
+       var price0 = document.createElement("p");
+       price0.innerText = "$"+data[a].price;
+       price0.id = "price";
+       var buy = document.createElement("div");
+       buy.innerText="QUICK BUY";
+       buy.id="buy";
+       var prod1 = document.createElement("a");
+   prod1.setAttribute("href",data[a].anchor)
+  
+       div1.append(image);
+       prod1.append(div1)
+       div.append(prod1,name0,price0,buy);
+       document.getElementById("products").append(div)
+   }
+
+    // console.log(atoz)
+    var pricelth = document.querySelector("#sortby");
+    pricelth.addEventListener("change", myfunc2)
+    function myfunc2() {
+        if (pricelth.value==("Price: low to high")){
+
+            var datalth=  data.sort(myfunc1)
     function myfunc1(a,b) {
         return (a.price-b.price)
     }
-    // console.log(atoz)
-    var pricelth = document.querySelector("#sortby");
-    pricelth.addEventListener("select", myfunc2)
-    function myfunc2() {
-        if (pricelth.nodeValue==("Price: low to high")){
+            document.querySelector("#div0").parentNode.remove()
+           var z= document.createElement("div");
+           z.setAttribute("id","products");
+           document.getElementById("bestsellers").append(z)
             for(var a=0; a<datalth.length; a++){
        var div = document.createElement("div");
        div.id="div0";
@@ -411,33 +442,116 @@
    }
 
         }
-        
-    }
 
-   for(var a=0; a<datalth.length; a++){
+        else if (pricelth.value==("Price:High to low")){
+
+            var datahtl=  data.sort(myfunc1)
+                   function myfunc1(a,b) {
+                 return (b.price-a.price)
+                  }
+               document.querySelector("#div0").parentNode.remove()
+               var z= document.createElement("div");
+                z.setAttribute("id","products");
+                document.getElementById("bestsellers").append(z)
+                 for(var a=0; a<datahtl.length; a++){
+                var div = document.createElement("div");
+                        div.id="div0";
+                var div1 = document.createElement("div");
+                         var x = "bg"+a
+                         div1.id= x;
+                var image = document.createElement("img");
+                    image.src=datahtl[a].image;
+                   var name0 = document.createElement("h3");
+                     name0.innerText = datahtl[a].name;
+                        name0.id = "name"
+                   var price0 = document.createElement("p");
+                     price0.innerText = "$"+datahtl[a].price;
+                        price0.id = "price";
+                    var buy = document.createElement("div");
+                        buy.innerText="QUICK BUY";
+                           buy.id="buy";
+                   var prod1 = document.createElement("a");   
+                   prod1.setAttribute("href",datahtl[a].anchor)
+
+                       div1.append(image);
+                      prod1.append(div1)
+                   div.append(prod1,name0,price0,buy);
+                  document.getElementById("products").append(div)
+                }
+
+               }
+               else if (pricelth=="A-Z"){
+
+                var dataatoz=  data.sort(myfunc1)
+                   function myfunc1(a,b) {
+                 return (a.name-b.name)
+                  }
+                  console.log(dataatoz)
+               document.querySelector("#div0").parentNode.remove()
+               var z= document.createElement("div");
+                z.setAttribute("id","products");
+                document.getElementById("bestsellers").append(z)
+                 for(var a=0; a<dataatoz.length; a++){
+                var div = document.createElement("div");
+                        div.id="div0";
+                var div1 = document.createElement("div");
+                         var x = "bg"+a
+                         div1.id= x;
+                var image = document.createElement("img");
+                    image.src=dataatoz[a].image;
+                   var name0 = document.createElement("h3");
+                     name0.innerText = dataatoz[a].name;
+                        name0.id = "name"
+                   var price0 = document.createElement("p");
+                     price0.innerText = "$"+dataatoz[a].price;
+                        price0.id = "price";
+                    var buy = document.createElement("div");
+                        buy.innerText="QUICK BUY";
+                           buy.id="buy";
+                   var prod1 = document.createElement("a");   
+                   prod1.setAttribute("href",dataatoz[a].anchor)
+
+                       div1.append(image);
+                      prod1.append(div1)
+                   div.append(prod1,name0,price0,buy);
+                  document.getElementById("products").append(div)
+                }
+
+               }
+               else {
+                document.querySelector("#div0").parentNode.remove()
+               var z= document.createElement("div");
+                z.setAttribute("id","products");
+                document.getElementById("bestsellers").append(z)
+                
+                for(var a=0; a<data.length; a++){
        var div = document.createElement("div");
        div.id="div0";
        var div1 = document.createElement("div");
        var x = "bg"+a
       div1.id= x;
        var image = document.createElement("img");
-       image.src=datalth[a].image;
+       image.src=data[a].image;
        var name0 = document.createElement("h3");
-       name0.innerText = datalth[a].name;
+       name0.innerText = data[a].name;
        name0.id = "name"
        var price0 = document.createElement("p");
-       price0.innerText = "$"+datalth[a].price;
+       price0.innerText = "$"+data[a].price;
        price0.id = "price";
        var buy = document.createElement("div");
        buy.innerText="QUICK BUY";
        buy.id="buy";
        var prod1 = document.createElement("a");
-   prod1.setAttribute("href",datalth[a].anchor)
+   prod1.setAttribute("href",data[a].anchor)
   
        div1.append(image);
        prod1.append(div1)
        div.append(prod1,name0,price0,buy);
        document.getElementById("products").append(div)
    }
+
+               }
+               
+        }  
 
 </script>
