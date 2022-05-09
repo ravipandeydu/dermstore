@@ -1,0 +1,259 @@
+
+
+         * {
+             padding: 0px;
+             margin: 0px;
+             font-family: lato regular,Helvetica,Arial,sans-serif;
+             font-size: 22px;
+             line-height: 21px;
+         }
+         #div0 {
+             width:10%
+         }
+        #imgsets {
+            width: 50%;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 40px;
+            grid-area: "f0";
+        }
+        #imgsets:hover {
+           cursor: pointer;
+        }
+        #imgsets>div {
+            width: 100%;
+            border: 1px solid grey;
+        }
+        #imgsets>div>img {
+            width: 100%;
+        }
+        #div1 {
+            width: 50%;
+            height: 850px;
+            overflow: auto;
+        }
+        #div1::-webkit-scrollbar {
+            display: none;
+        }
+        #div2 {
+            width: 34%;
+            padding-left: 14px;
+            margin-top: 20px;
+        }
+        #container {
+            display: flex;
+            width: 90%;
+            margin: 20px;
+            gap: 5px;
+            margin-top: 15px;
+        }
+        #total {
+            margin: 20px;
+            margin-top: 40px;
+        }
+        #homeroute {
+            font-size: 17px;
+            padding-left: 70px;
+            grid-area: "a0";
+        }
+        .complogo {
+            width: 140px;
+            grid-area: "b0";
+        }
+        .complogo > img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-size: 23px;
+            margin-bottom: 10px;
+            grid-area: "c0";
+        }
+        .sub {
+            grid-area: "d0";
+        }
+        .sub, .para1, .para2, .para3, .para4, .para5,.para6, .para7 {
+            font-size: 14px;
+            margin-bottom: 13px;
+            color: rgba(0, 0, 0, 0.748);
+        }
+        .stardiv {
+            display: flex;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            grid-area: "g0";
+        }
+        .star {
+            width: 13%;
+        }
+        .star> img{
+            width: 100%;
+        }
+        .stardiv>.para1 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .t11,.t22 {
+            font-size: 14px;
+            padding: 7px;
+        }
+        .t1,.t2 {
+            margin-left: 12px;
+            border-radius: 100%;
+        }
+        .t1:hover, .t2:hover {
+            cursor: pointer;
+        }
+        #t11,#t22 {
+            font-weight: 700;
+        }
+        .table {
+            border: 1px solid rgba(0, 0, 0, 0.316);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #price{
+            font-size: 26px;
+            margin-bottom: 34px;
+            margin-top: 30px;
+            font-weight: 540;
+        }
+        .qty {
+            height: 50px;
+            width: 130px;
+            border: 1px solid rgba(0, 0, 0, 0.882);
+            display: flex;
+            text-align: center;
+        }
+        #minus {
+            width: 33%;
+            padding-top: 14px;
+            background-color: rgba(128, 128, 128, 0.203);
+        }
+        #plus {
+            width: 33%;
+            padding-top: 14px;
+        }
+        #minus:hover, #plus:hover {
+            cursor: pointer;
+        }
+        #count {
+            width: 33%;
+            border-left:  1px solid black;
+            border-right: 1px solid black;
+            padding-top: 14px;
+        }
+        .quantity {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 7px;
+            margin-bottom: 20px;
+        }
+        .span2 {
+            display: inline;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: rgba(0, 0, 0, 0.714);
+        }
+        .qtysub {
+            padding: 14px;
+            font-size: 14px;
+            width: 200px;
+            background-color: black;
+            color : white
+        }
+        .qtysub:hover {
+            cursor: pointer;
+        }
+        .save {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .para2 {
+            margin-bottom: 24px;
+        }
+        .para4>span , .para6>span {
+            font-size: 16px;
+            font-weight: 550;
+            text-decoration: underline;
+        }
+        #preview {
+            height: 600px;
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            grid-area: "e0";
+        }
+        #preview >img {
+            width: 100%;
+        }
+        #install {
+            display: flex;
+            margin: auto;
+            margin-left: 70px;
+            margin-top: 15px;
+        }
+        #installtext {
+            font-size: 15px;
+            margin-left: 30px;
+        
+        }
+        #install1 {
+            width: 80px;
+            height: 25px;
+        }
+        #install1:nth-child(1) >img {
+            width:70% ;
+        }
+        #install1 >img {
+            width: 100%;
+        }
+        #installments {
+            margin-top: 40px; 
+            padding-top: 14px;
+            background-color: rgba(128, 128, 128, 0.171);
+            padding-bottom: 14px;
+        }
+        #select1 {
+            height: 30px;
+            width: 100%;
+            border-top: 1px solid rgba(0, 0, 0, 0.499);
+            font-size: 16px;
+            padding-left: 20px;
+            padding-top: 12px;
+            padding-bottom: 10px;
+        }
+        #select {
+            margin-top: 60px;
+            margin-right: 20px;
+        }#select2 {
+            height: 30px;
+            width: 100%;
+            border-top: 1px solid rgba(0, 0, 0, 0.478);
+            font-size: 16px;
+            padding-left: 20px;
+            padding-top: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.674);
+        }
+
+        @media all and (min-width : 400px)and (max-width : 800px){
+                 
+            #total {
+                display: grid;
+                grid-template-areas: "a0"
+                                      "b0"
+                                      "c0"
+                                      "d0"
+                                      "e0"
+                                      "f0";
+            }
+
+        }
+      

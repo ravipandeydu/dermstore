@@ -1,0 +1,557 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+         *{
+             padding: 0px;
+             margin: 0px;
+             font-family: lato regular,Helvetica,Arial,sans-serif;
+             line-height: 17px;
+         }
+         #total {
+             display: flex;
+             padding: 40px;
+             padding-left: 150px;
+             padding-right: 145px;
+             padding-top: 100px;
+             justify-content: space-around;   
+
+         }
+         #bestsellers {
+             width: 73%;
+         }
+         #refine {
+             width: 20%;
+         }
+         .subheading {
+             font-size: 22px;
+             font-weight: 300;
+         }
+         .para {
+             font-size: 12px;
+             padding-top: 22px;
+             
+         }
+         #div0 {
+             height: auto;
+             width :31%;
+             margin-top: 50px;
+         }
+        
+         #div0>a>div {
+        
+             background-size: cover;
+             background-repeat: no-repeat;
+         }
+          img:hover {
+             cursor: pointer;
+            opacity: 0;
+         }
+         #div0 >a>div>img {
+             width: 100%;
+         }
+         #div0>h3 {
+             padding-top: 10px;
+             font-size: 12px;
+             font-weight: 500;
+             text-align: center;
+         }
+         #products {
+             display:flex;
+             flex-wrap: wrap;
+             justify-content: space-around;
+         }
+         #buy {
+             height: 25px;
+             width :90%;
+             align-items: center;
+             text-align: center;
+             background-color: black;
+             color: white;
+            
+             padding-top: 10px;
+             font-size: 14px;
+             margin-top: 15px;
+             
+         }    
+         #sortby {
+             height: 32px;
+             width: 25%;
+             margin-left: 15px;
+         }
+         label {
+             font-size: 13px;
+             font-weight: 500;
+         }
+         #selection {
+             margin-top: 40px;
+         }
+       
+        #bg0 {
+             background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/11289609-8744892770898772.jpg);
+         }
+         #bg1 {
+             background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/11370303-1514871771637066.jpg);
+         }
+        #bg2 {
+            background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/12596429-5594867613443995.jpg);
+        }
+        #bg3 {
+            background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/11588281-1814883754372942.jpg);
+        }
+        #bg4 {
+            background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/11174178-1564909106414676.jpg);
+        }
+        #bg5 {
+            background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/12915711-2324864299657906.jpg);
+        }
+        #bg6>img:hover {
+                    opacity: 1;
+        }
+        #bg7 {
+            background-image: url(https://static.thcdn.com/images/small/webp//productimg/original/11370312-6934938634193226.jpg);
+        }
+        #bg8 {
+            background-image: url(https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290635-2054892767941057.jpg);
+        }
+        #brand {
+            height: 150px;
+            width: 100%;
+            overflow: auto;
+            border-top: 1px solid rgba(0, 0, 0, 0.507);
+        }
+        input {
+            margin-top: 10px;
+        }
+        #refine >div {
+            margin-top: 30px;
+        }
+        #price {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+        #sub1 {
+            font-size: 15px;
+            font-weight: 700;
+        }
+         
+
+    </style>
+</head>
+<body>
+    <div id="total">
+
+            <div id="refine">
+                refine
+                <hr>
+                <div>
+                    <p id="sub1">Brand</p>
+                    <div id="brand">
+                        <input type="checkbox" id="one">
+                        <label for="one">100% Pure(2)</label>
+                        <br>
+                        <input type="checkbox" id="two">
+                        <label for="two">Allies of skin(20)</label>
+                        <br>
+                        <input type="checkbox" name="" id="two">
+                        <label for="two">Alterna(15)</label>
+                        <br>
+                        <input type="checkbox" name="" id="three">
+                        <label for="three">Aquis(41)</label>
+                        <br>
+                        <input type="checkbox" name="" id="four">
+                        <label for="four">Avene(22)</label>
+                        <br>
+                        <input type="checkbox" id="five">
+                        <label for="five">Beauty ORA(4)</label>
+                        <br>
+                        <input type="checkbox" name="" id="six">
+                        <label for="six">Bioderma</label>
+                        <br>
+                        <input type="checkbox" name="" id="seven">
+                       <label for="seven">Cover FX</label>
+                    </div>
+                </div>
+  
+                <div>
+                    <p id="sub1">Skincare produttype</p>
+                    <div id="brand">
+                        <input type="checkbox" id="one">
+                        <label for="one">Moisturizers(120)</label>
+                        <br>
+                        <input type="checkbox" id="two">
+                        <label for="two">Serums(82)</label>
+                        <br>
+                        <input type="checkbox" name="" id="two">
+                        <label for="two">Claensers(24)</label>
+                        <br>
+                        <input type="checkbox" name="" id="three">
+                        <label for="three">Eye Care(35)</label>
+                        <br>
+                        <input type="checkbox" name="" id="four">
+                        <label for="four">Scrubs</label>
+                        <br>
+                        <input type="checkbox" id="five">
+                        <label for="five">Beauty ORA</label>
+                        <br>
+                        <input type="checkbox" name="" id="six">
+                        <label for="six">Bioderma</label>
+                        <br>
+                        <input type="checkbox" name="" id="seven">
+                       <label for="seven">Cover FX</label>
+                    </div>
+                </div>
+                
+                <div>
+                    <p id="sub1">Skin care</p>
+                    <div id="brand">
+                        <input type="checkbox" id="one">
+                        <label for="one">All(82)</label>
+                        <br>
+                        <input type="checkbox" id="two">
+                        <label for="two">Combination(27)</label>
+                        <br>
+                        <input type="checkbox" name="" id="two">
+                        <label for="two">Dehydrated(12)</label>
+                        <br>
+                        <input type="checkbox" name="" id="three">
+                        <label for="three">Dry(23)</label>
+                        <br>
+                        <input type="checkbox" name="" id="four">
+                        <label for="four">Mature(60)</label>
+                        <br>
+                        <input type="checkbox" id="five">
+                        <label for="five">Beauty ORA</label>
+                        <br>
+                        <input type="checkbox" name="" id="six">
+                        <label for="six">Bioderma</label>
+                        <br>
+                        <input type="checkbox" name="" id="seven">
+                       <label for="seven">Cover FX</label>
+                    </div>
+                </div>
+
+                <div>
+                    <p id="sub1">Skincare Concern</p>
+                    <div id="brand">
+                        <input type="checkbox" id="one">
+                        <label for="one">Acne</label>
+                        <br>
+                        <input type="checkbox" id="two">
+                        <label for="two">Allies of skin</label>
+                        <br>
+                        <input type="checkbox" name="" id="two">
+                        <label for="two">pegmentation</label>
+                        <br>
+                        <input type="checkbox" name="" id="three">
+                        <label for="three">Visable pores</label>
+                        <br>
+                        <input type="checkbox" name="" id="four">
+                        <label for="four">Avene</label>
+                        <br>
+                        <input type="checkbox" id="five">
+                        <label for="five">Beauty ORA</label>
+                        <br>
+                        <input type="checkbox" name="" id="six">
+                        <label for="six">Bioderma</label>
+                        <br>
+                        <input type="checkbox" name="" id="seven">
+                       <label for="seven">Cover FX</label>
+                    </div>
+                </div>
+
+                <div>
+                    <p id="sub1">Hairtype</p>
+                    <div id="brand">
+                        <input type="checkbox" id="one">
+                        <label for="one">100% Pure</label>
+                        <br>
+                        <input type="checkbox" id="two">
+                        <label for="two">Allies of skin</label>
+                        <br>
+                        <input type="checkbox" name="" id="two">
+                        <label for="two">Alterna</label>
+                        <br>
+                        <input type="checkbox" name="" id="three">
+                        <label for="three">Aquis</label>
+                        <br>
+                        <input type="checkbox" name="" id="four">
+                        <label for="four">Avene</label>
+                        <br>
+                        <input type="checkbox" id="five">
+                        <label for="five">Beauty ORA</label>
+                        <br>
+                        <input type="checkbox" name="" id="six">
+                        <label for="six">Bioderma</label>
+                        <br>
+                        <input type="checkbox" name="" id="seven">
+                       <label for="seven">Cover FX</label>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div id="bestsellers">
+                <h3 class="subheading">
+                    Dermstore Bestsellers
+                </h3>
+                <p class="para">
+                    The beauty, skin & hair products you're unapologetically obsessed with. And we understand.
+                     From skin care as an expression of self-care, to hair care revolve self-confidence around,
+                     shop our tried and tested products that are loved by thousands delivered straight to your door.
+                </p>
+                <div id="selection">
+                    <label for="sortby">Sort by</label>
+                    <select name="sort by" id="sortby">
+                        <option value="Default">Default</option>
+                        <option value="Best sellers">Best sellers</option>
+                        <option value="Price:High to low">Price:High to low</option>
+                        <option value="Price: low to high">Price: low to high</option>
+                        <option value="A-Z">A-Z</option>
+                        <option value="Newest Arrival">Newest Arrival</option>
+                        <option value="Percentage Discount">Percentage Discount</option>
+                   </select>
+                  </div>
+
+              
+                <div id="products">
+
+                    
+
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+    var data =[ {
+        "image":"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-1174892770940184.jpg",
+        "name" : "SkinCeuticals C E Ferulic (1 fl. oz.)",
+        "price" : "169.00",
+        "anchor":"product1.html"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/11370303-1074944341868735.jpg",
+        "name" : "EltaMD UV Clear Broad-Spectrum SPF 46 (1.7 oz.)",
+        "price" : "39.00"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/12596429-3594871019700125.jpg",
+        "name" : "SkinMedica TNS Advanced+ Serum (1 oz.)",
+        "price" : "250.75",
+        "anchor" : "product2.html"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/11588281-8764882139037003.jpg",
+        "name" : "Sunday Riley GOOD GENES All-In-One Lactic Acid Treatment (1.7 oz. - 175 Value)",
+        "price" : "122.00"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/11174178-1044909106371632.jpg",
+        "name" : "Paula's Choice SKIN PERFECTING 2 BHA Liquid Exfoliant (4 fl. oz.)",
+        "price" : "32.00"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/12915711-2084866563283492.jpg",
+        "name" : "Oribe Gold Lust Repair Restore Shampoo Liter (33.8 fl. oz.)",
+        "price" : "157.00"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/11291496-1824871578503201.jpg",
+        "name" : "Clinical Cleansing Complex (6 fl. oz.)",
+        "price" : "45.00"
+    },{
+        "image":"https://static.thcdn.com/images/small/webp//productimg/original/11370312-1044938634157826.jpg",
+        "name" : "EltaMD UV Clear Broad-Spectrum SPF 46 - Tinted (1.7 oz.)",
+        "price" : "41.00"
+    },{
+        "image":"https://static.thcdn.com/images/large/webp//productimg/1600/1600/11290635-1804892767902966.jpg",
+        "name":"SkinCeuticals Triple Lipid Restore 242 (1.6 fl. oz.)",
+        "price":"200.00"
+    }
+]  
+for(var a=0; a<data.length; a++){
+       var div = document.createElement("div");
+       div.id="div0";
+       var div1 = document.createElement("div");
+       var x = "bg"+a
+      div1.id= x;
+       var image = document.createElement("img");
+       image.src=data[a].image;
+       var name0 = document.createElement("h3");
+       name0.innerText = data[a].name;
+       name0.id = "name"
+       var price0 = document.createElement("p");
+       price0.innerText = "$"+data[a].price;
+       price0.id = "price";
+       var buy = document.createElement("div");
+       buy.innerText="QUICK BUY";
+       buy.id="buy";
+       var prod1 = document.createElement("a");
+   prod1.setAttribute("href",data[a].anchor)
+  
+       div1.append(image);
+       prod1.append(div1)
+       div.append(prod1,name0,price0,buy);
+       document.getElementById("products").append(div)
+   }
+
+    // console.log(atoz)
+    var pricelth = document.querySelector("#sortby");
+    pricelth.addEventListener("change", myfunc2)
+    function myfunc2() {
+        if (pricelth.value==("Price: low to high")){
+
+            var datalth=  data.sort(myfunc1)
+    function myfunc1(a,b) {
+        return (a.price-b.price)
+    }
+            document.querySelector("#div0").parentNode.remove()
+           var z= document.createElement("div");
+           z.setAttribute("id","products");
+           document.getElementById("bestsellers").append(z)
+            for(var a=0; a<datalth.length; a++){
+       var div = document.createElement("div");
+       div.id="div0";
+       var div1 = document.createElement("div");
+       var x = "bg"+a
+      div1.id= x;
+       var image = document.createElement("img");
+       image.src=datalth[a].image;
+       var name0 = document.createElement("h3");
+       name0.innerText = datalth[a].name;
+       name0.id = "name"
+       var price0 = document.createElement("p");
+       price0.innerText = "$"+datalth[a].price;
+       price0.id = "price";
+       var buy = document.createElement("div");
+       buy.innerText="QUICK BUY";
+       buy.id="buy";
+       var prod1 = document.createElement("a");
+   prod1.setAttribute("href",datalth[a].anchor)
+  
+       div1.append(image);
+       prod1.append(div1)
+       div.append(prod1,name0,price0,buy);
+       document.getElementById("products").append(div)
+   }
+
+        }
+
+        else if (pricelth.value==("Price:High to low")){
+
+            var datahtl=  data.sort(myfunc1)
+                   function myfunc1(a,b) {
+                 return (b.price-a.price)
+                  }
+               document.querySelector("#div0").parentNode.remove()
+               var z= document.createElement("div");
+                z.setAttribute("id","products");
+                document.getElementById("bestsellers").append(z)
+                 for(var a=0; a<datahtl.length; a++){
+                var div = document.createElement("div");
+                        div.id="div0";
+                var div1 = document.createElement("div");
+                         var x = "bg"+a
+                         div1.id= x;
+                var image = document.createElement("img");
+                    image.src=datahtl[a].image;
+                   var name0 = document.createElement("h3");
+                     name0.innerText = datahtl[a].name;
+                        name0.id = "name"
+                   var price0 = document.createElement("p");
+                     price0.innerText = "$"+datahtl[a].price;
+                        price0.id = "price";
+                    var buy = document.createElement("div");
+                        buy.innerText="QUICK BUY";
+                           buy.id="buy";
+                   var prod1 = document.createElement("a");   
+                   prod1.setAttribute("href",datahtl[a].anchor)
+
+                       div1.append(image);
+                      prod1.append(div1)
+                   div.append(prod1,name0,price0,buy);
+                  document.getElementById("products").append(div)
+                }
+
+               }
+               else if (pricelth=="A-Z"){
+
+                var dataatoz=  data.sort(myfunc1)
+                   function myfunc1(a,b) {
+                 return (a.name-b.name)
+                  }
+                  console.log(dataatoz)
+               document.querySelector("#div0").parentNode.remove()
+               var z= document.createElement("div");
+                z.setAttribute("id","products");
+                document.getElementById("bestsellers").append(z)
+                 for(var a=0; a<dataatoz.length; a++){
+                var div = document.createElement("div");
+                        div.id="div0";
+                var div1 = document.createElement("div");
+                         var x = "bg"+a
+                         div1.id= x;
+                var image = document.createElement("img");
+                    image.src=dataatoz[a].image;
+                   var name0 = document.createElement("h3");
+                     name0.innerText = dataatoz[a].name;
+                        name0.id = "name"
+                   var price0 = document.createElement("p");
+                     price0.innerText = "$"+dataatoz[a].price;
+                        price0.id = "price";
+                    var buy = document.createElement("div");
+                        buy.innerText="QUICK BUY";
+                           buy.id="buy";
+                   var prod1 = document.createElement("a");   
+                   prod1.setAttribute("href",dataatoz[a].anchor)
+
+                       div1.append(image);
+                      prod1.append(div1)
+                   div.append(prod1,name0,price0,buy);
+                  document.getElementById("products").append(div)
+                }
+
+            }
+               else {
+                document.querySelector("#div0").parentNode.remove()
+               var z= document.createElement("div");
+                z.setAttribute("id","products");
+                document.getElementById("bestsellers").append(z)
+                
+                for(var a=0; a<data.length; a++){
+       var div = document.createElement("div");
+       div.id="div0";
+       var div1 = document.createElement("div");
+       var x = "bg"+a
+      div1.id= x;
+       var image = document.createElement("img");
+       image.src=data[a].image;
+       var name0 = document.createElement("h3");
+       name0.innerText = data[a].name;
+       name0.id = "name"
+       var price0 = document.createElement("p");
+       price0.innerText = "$"+data[a].price;
+       price0.id = "price";
+       var buy = document.createElement("div");
+       buy.innerText="QUICK BUY";
+       buy.id="buy";
+       var prod1 = document.createElement("a");
+   prod1.setAttribute("href",data[a].anchor)
+  
+       div1.append(image);
+       prod1.append(div1)
+       div.append(prod1,name0,price0,buy);
+       document.getElementById("products").append(div)
+   }
+
+               }
+               
+        }  
+
+</script>
